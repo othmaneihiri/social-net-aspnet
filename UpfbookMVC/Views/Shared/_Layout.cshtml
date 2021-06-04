@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @Html.ActionLink("Upfbook", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mr-auto">
+                    @if (!PhonebookMVC.Services.AuthenticationService.IsLogged)
+                    {
+                        <li class="nav-item">@Html.ActionLink("Login", "Login", "Account", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Register", "Register", "Account", null, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        if (PhonebookMVC.Services.AuthenticationService.LoggedUser.IsAdmin)
+                        {
+                            <li class="nav-item">@Html.ActionLink("Users", "Index", "Users", null, new { @class = "nav-link" })</li>
+                        }
+                        <li class="nav-item">@Html.ActionLink("My Contacts", "Index", "Contacts", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("My Groups", "Index", "Groups", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("My Profile", "MyProfile", "Account", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("My Publications", "Index", "Publications", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item"><a href="http://localhost:38231/Content/Index" class = "nav-link">My Content</a></li>
+                        <li class="nav-item">@Html.ActionLink("Chatter", "Index", "Chat", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "nav-link" })</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Upfbook</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
