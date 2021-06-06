@@ -6,10 +6,12 @@ using System.Web;
 
 namespace PhonebookMVC.Models
 {
-    public class Content 
+    /// <summary>
+    /// regroupe tous les utilisateurs : table independant
+    /// </summary>
+    public class Content : BaseModel
     {
-        [Key]
-        public int ID { get; set; }
+       
         public string Title { get; set; }
         public string Description { get; set; }
         public string Contents { get; set; }

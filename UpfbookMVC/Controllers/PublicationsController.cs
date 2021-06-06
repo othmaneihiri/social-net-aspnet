@@ -40,7 +40,6 @@ namespace PhonebookMVC.Controllers
                         ID = group.ID,
                         Titre = group.Titre,
                         Context = group.Context,
-                        ImagePub = group.ImagePub,
                         UserID = group.UserID
                     };
 
@@ -74,7 +73,6 @@ namespace PhonebookMVC.Controllers
                         ID = group.ID,
                         Titre = group.Titre,
                         Context = group.Context,
-                        ImagePub = group.ImagePub,
                         UserID = group.UserID
                     };
 
@@ -121,7 +119,7 @@ namespace PhonebookMVC.Controllers
                 
                 group.Titre = model.Titre;
                 group.Context = model.Context;
-                group.ImagePub = model.ImagePub;
+
 
                 /*
                         Titre = group.Titre,
@@ -151,8 +149,7 @@ namespace PhonebookMVC.Controllers
                     {
                         ID = group.ID,
                         Titre = group.Titre,
-                        Context = group.Context,
-                        ImagePub = group.ImagePub
+                        Context = group.Context
                     };
 
                     return View(g);

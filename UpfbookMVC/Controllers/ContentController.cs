@@ -10,7 +10,7 @@ using Upf.Repositories;
 
 namespace PhonebookMVC.Controllers
 {
-    //[RoutePrefix("Content")]
+    //[RoutePrefix("Views/Content")]
     [ValidateInput(false)]
     public class ContentController : Controller
     {
@@ -91,7 +91,7 @@ namespace PhonebookMVC.Controllers
             int i = service.UploadImageInDataBase(file, model);
             if (i == 1)
             {
-                return RedirectToAction("Index");
+                return Redirect("http://localhost:38231/Content/Index");
             }
             return View(model);
         }

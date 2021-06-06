@@ -1,35 +1,23 @@
-namespace PhonebookMVC.Migrations
+﻿namespace PhonebookMVC.Migrations
 {
-    using Models;
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<UpfbookMvcDB>
+    internal sealed class Configuration : DbMigrationsConfiguration<PhonebookMVC.Models.UpfbookMvcDB>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(UpfbookMvcDB context)
+        protected override void Seed(PhonebookMVC.Models.UpfbookMvcDB context)
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-
-            context.Users.AddOrUpdate(
-                u => u.Username,
-                new User { Username = "admin", Password = "password", IsAdmin = true }
-            );
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  to avoid creating duplicate seed data.
         }
     }
 }

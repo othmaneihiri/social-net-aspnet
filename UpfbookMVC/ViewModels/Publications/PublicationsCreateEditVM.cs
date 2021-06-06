@@ -9,7 +9,6 @@ namespace PhonebookMVC.ViewModels.Publications
         [Required]
         public string Titre { get; set; }
         public string Context { get; set; }
-        public byte[] ImagePub { get; set; }
 
         public int UserID { get; set; }
 
