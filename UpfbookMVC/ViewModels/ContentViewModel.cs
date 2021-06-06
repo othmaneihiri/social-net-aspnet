@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhonebookMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,12 +8,8 @@ using System.Web.Mvc;
 
 namespace PhonebookMVC.ViewModel
 {
-    public class ContentViewModel
+    public class ContentViewModel: BaseModel
     {
-        /// <summary>
-        /// Get and Set id
-        /// </summary>
-        public int ID { get; set; }
         /// <summary>
         /// Get and set title of content 
         /// </summary>
