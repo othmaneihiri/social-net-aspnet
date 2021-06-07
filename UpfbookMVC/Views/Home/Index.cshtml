@@ -9,12 +9,37 @@
 {
     <h2>News feed</h2>
 <br />
-
+    <div class="card bg-dark text-white" style="border-radius: 40px;width: 29%;
+    position: absolute;
+    left: 905px;
+    top: 150px;">
+        <div class="bg-image" style="border-radius: 35px;">
+            <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-weather/draw1.png"
+                 class="card-img"
+                 alt="weather" />
+            <div class="mask" style="background-color: rgba(190, 216, 232, .5);"></div>
+        </div>
+        <div class="card-img-overlay text-dark p-5">
+            <h4 class="mb-0">FES, FEZ, MOROCCO</h4>
+            <p class="display-2 my-3">31.28°C</p>
+            <p class="mb-2">Feels Like: <strong>40.08 °C</strong></p>
+            <h5>Summer Time</h5>
+        </div>
+    </div>
 
     <div class="container">
-        <h2>Pub # :</h2>
+       
+
+      
 @foreach (var item in Model)
 {
+   
+    <label>Pub : #</label>
+      
+          //<h2>Pub # :</h2>
+      
+
+    
         <div class="card" style="width:400px">
             <img class="card-img-top" src="/Content/RetrieveImage/@item.ID" alt="" height=100 width=200 />
             

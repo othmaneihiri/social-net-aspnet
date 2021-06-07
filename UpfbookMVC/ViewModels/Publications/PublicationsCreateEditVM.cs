@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PhonebookMVC.ViewModels.Publications
 {
-    public class PublicationsCreateEditVM : BaseVM
+    public class EventsCreateEditVM : BaseVM
     {
         [Required]
         public string Titre { get; set; }

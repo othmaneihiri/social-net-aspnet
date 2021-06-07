@@ -206,6 +206,7 @@
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PhonesController.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Content.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Phone.cs" />
     <Compile Include="Models\Publication.cs" />
@@ -241,6 +243,7 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ContactRepository.cs" />
     <Compile Include="Repositories\ContentRepository.cs" />
+    <Compile Include="Repositories\EventRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
     <Compile Include="Repositories\PhoneRepository.cs" />
     <Compile Include="Repositories\PublicationRepository.cs" />
@@ -258,6 +261,7 @@
     <Compile Include="ViewModels\Contacts\ContactsListVM.cs" />
     <Compile Include="ViewModels\Contacts\ContactSorting.cs" />
     <Compile Include="ViewModels\ContentViewModel.cs" />
+    <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\Groups\GroupsCreateEditVM.cs" />
     <Compile Include="ViewModels\Groups\GroupsListVM.cs" />
     <Compile Include="ViewModels\Phones\PhoneCreateEditVM.cs" />
@@ -700,6 +704,8 @@
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Content\Create.cshtml" />
     <Content Include="Views\Content\Index.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -35,7 +35,7 @@ namespace PhonebookMVC.Controllers
 
                 if (group != null && group.UserID == AuthenticationService.LoggedUser.ID)
                 {
-                    PublicationsCreateEditVM g = new PublicationsCreateEditVM()
+                    EventsCreateEditVM g = new EventsCreateEditVM()
                     {
                         ID = group.ID,
                         Titre = group.Titre,
@@ -54,7 +54,7 @@ namespace PhonebookMVC.Controllers
         {
             if (id == null) // Create
             {
-                return View(new PublicationsCreateEditVM()
+                return View(new EventsCreateEditVM()
                 {
                     UserID = AuthenticationService.LoggedUser.ID
                 });
@@ -68,7 +68,7 @@ namespace PhonebookMVC.Controllers
 
                 if (group != null && group.UserID == AuthenticationService.LoggedUser.ID)
                 {
-                    PublicationsCreateEditVM g = new PublicationsCreateEditVM()
+                    EventsCreateEditVM g = new EventsCreateEditVM()
                     {
                         ID = group.ID,
                         Titre = group.Titre,
@@ -85,7 +85,7 @@ namespace PhonebookMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateEdit(PublicationsCreateEditVM model)
+        public ActionResult CreateEdit(EventsCreateEditVM model)
         {
             if (!ModelState.IsValid)
             {
@@ -145,7 +145,7 @@ namespace PhonebookMVC.Controllers
 
                 if (group != null && group.UserID == AuthenticationService.LoggedUser.ID)
                 {
-                    PublicationsCreateEditVM g = new PublicationsCreateEditVM()
+                    EventsCreateEditVM g = new EventsCreateEditVM()
                     {
                         ID = group.ID,
                         Titre = group.Titre,
